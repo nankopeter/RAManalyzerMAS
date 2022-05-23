@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://kristian.sranko/PslistAgent_out.owl" uri="PslistAgent_out.owl"/>
+    <uri id="Imports Wizard Entry" name="http://kristian.sranko/rekal_agents.owl" uri="PslistAgent_out.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="EATHooksAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="ExitedProcessesAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="FakeNamedProcessesAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="HidingProcessesAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="IATHooksAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="InlineHooksAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="LdrModuleAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="MainAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="MalfindAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="PslistAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="PslistPAPHAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="PsscanAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="PstreeAgent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="duplicate:http://kristian.sranko/rekal_agents.owl" uri="rekal_agents.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1527009911832" name="http://patrik.matiasko/agents.owl" uri="agents.owl"/>
+    </group>
+</catalog>

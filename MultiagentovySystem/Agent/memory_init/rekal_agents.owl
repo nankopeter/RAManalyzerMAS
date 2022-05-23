@@ -1,0 +1,611 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://kristian.sranko/rekal_agents.owl#"
+     xml:base="http://kristian.sranko/rekal_agents.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://kristian.sranko/rekal_agents.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#addressOf -->
+
+    <owl:ObjectProperty rdf:about="http://kristian.sranko/rekal_agents.owl#addressOf"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#callsFunction -->
+
+    <owl:ObjectProperty rdf:about="http://kristian.sranko/rekal_agents.owl#callsFunction"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#dllOf -->
+
+    <owl:ObjectProperty rdf:about="http://kristian.sranko/rekal_agents.owl#dllOf">
+        <owl:inverseOf rdf:resource="http://kristian.sranko/rekal_agents.owl#hasDLL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#does -->
+
+    <owl:ObjectProperty rdf:about="http://kristian.sranko/rekal_agents.owl#does"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#functionOf -->
+
+    <owl:ObjectProperty rdf:about="http://kristian.sranko/rekal_agents.owl#functionOf"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#hasDLL -->
+
+    <owl:ObjectProperty rdf:about="http://kristian.sranko/rekal_agents.owl#hasDLL"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#memberOf -->
+
+    <owl:ObjectProperty rdf:about="http://kristian.sranko/rekal_agents.owl#memberOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#base -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#base"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#created -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#created"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#init -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#init"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#load -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#load"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#mem -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#mem"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#path -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#path"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#pid -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#pid"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#process_name -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#process_name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#DLLs -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#DLLs"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Drivers -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Drivers"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#EATHooks -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#EATHooks">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#EATHooksProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#EATHooksProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#EATHooksSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#EATHooks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#EATHooksSourceFunctions -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#EATHooksSourceFunctions">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#EATHooks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#EATHooksSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#EATHooksSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#EATHooksTargetFunctions -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#EATHooksTargetFunctions">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#EATHooks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#ExitedProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#ExitedProcesses">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#ExitedProcessesProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#ExitedProcessesProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#ExitedProcessesSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#ExitedProcesses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#ExitedProcessesSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#ExitedProcessesSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#FakeNamedProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#FakeNamedProcesses">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#FakeNamedProcessesProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#FakeNamedProcessesProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#FakeNamedProcessesSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#FakeNamedProcesses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#FakeNamedProcessesSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#FakeNamedProcessesSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Functions -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Functions"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#HidingProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#HidingProcesses">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#HidingProcessesProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#HidingProcessesProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#HidingProcessesSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#HidingProcesses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#HidingProcessesSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#HidingProcessesSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Hollowfind -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Hollowfind">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#HollowfindProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#HollowfindProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#HollowfindSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Hollowfind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#HollowfindProperties -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#HollowfindProperties">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Hollowfind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#HollowfindSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#HollowfindSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#IATHooks -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#IATHooks">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#IATHooksProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#IATHooksProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#IATHooksSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#IATHooks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#IATHooksSourceFunctions -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#IATHooksSourceFunctions">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#IATHooks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#IATHooksSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#IATHooksSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#IATHooksTargetFunctions -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#IATHooksTargetFunctions">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#IATHooks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#IRPHooks -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#IRPHooks">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#IRPHooksDriver -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#IRPHooksDriver">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#IRPHooks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#IRPHooksSourceFunctions -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#IRPHooksSourceFunctions">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#IRPHooks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#IRPHooksTargetFunctions -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#IRPHooksTargetFunctions">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#IRPHooks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#InlineHooks -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#InlineHooks">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#InlineHooksProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#InlineHooksProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#InlineHooksSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#InlineHooks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#InlineHooksSourceFunctions -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#InlineHooksSourceFunctions">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#InlineHooks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#InlineHooksSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#InlineHooksSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#InlineHooksTargetFunctions -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#InlineHooksTargetFunctions">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#InlineHooks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#LdrModule -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModule">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#LdrModuleDLLs -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModuleDLLs">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#LdrModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#LdrModuleProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModuleProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#LdrModuleSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#LdrModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#LdrModuleSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModuleSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Malfind -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Malfind">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#MalfindProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#MalfindProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#MalfindSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Malfind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#MalfindProperties -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#MalfindProperties">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Malfind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#MalfindSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#MalfindSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Modules -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Processes -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Processes"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Properties -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Properties"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Pslist -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Pslist">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#PslistPAPH -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#PslistPAPH">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#PslistPAPHProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#PslistPAPHProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#PslistPAPHSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#PslistPAPH"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#PslistPAPHSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#PslistPAPHSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#PslistProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#PslistProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#PslistSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Pslist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#PslistSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#PslistSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Psscan -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Psscan">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#PsscanProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#PsscanProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#PsscanSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Psscan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#PsscanSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#PsscanSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Pstree -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Pstree">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#PstreeProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#PstreeProcesses">
+        <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#PstreeSuspicious"/>
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Pstree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#PstreeSuspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#PstreeSuspicious">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Suspicious -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

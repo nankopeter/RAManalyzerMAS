@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/lib/xmlrpc-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/arq-2.8.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/icu4j-3.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jadetools-3.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/iri-0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/slf4j-log4j12-1.5.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-logging-1.2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jade.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/owlapi-distribution-4.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/mysql-connector-java-3.0.10-stable-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/concurrent.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/log4j-1.2.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/slf4j-api-1.5.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/xercesImpl-2.7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jena-2.6.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

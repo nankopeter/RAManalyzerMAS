@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="DP-Server_rekal">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/DP-Server_rekal.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jade.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jena.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xmlrpc-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xercesImpl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/concurrent.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/icu4j_3_4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-3.0.10-stable-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/arq.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/iri.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jadeTools.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/owlapi-distribution-4.1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

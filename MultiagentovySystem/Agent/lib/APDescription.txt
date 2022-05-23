@@ -1,0 +1,1 @@
+( ap-description  :name "P.local:1099/JADE" :ap-services (set))

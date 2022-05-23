@@ -1,0 +1,1686 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://patrik.matiasko/agents.owl#"
+     xml:base="http://patrik.matiasko/agents.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://patrik.matiasko/agents.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#does -->
+
+    <owl:ObjectProperty rdf:about="http://patrik.matiasko/agents.owl#does"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#created -->
+
+    <owl:DatatypeProperty rdf:about="http://patrik.matiasko/agents.owl#created">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#pid -->
+
+    <owl:DatatypeProperty rdf:about="http://patrik.matiasko/agents.owl#pid">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#platform -->
+
+    <owl:DatatypeProperty rdf:about="http://patrik.matiasko/agents.owl#platform">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#title -->
+
+    <owl:DatatypeProperty rdf:about="http://patrik.matiasko/agents.owl#title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#A -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#A">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SuspiciousBehaviorRules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#AntiAnalysis -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#AntiAnalysis">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#EvasionEvent"/>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SelfDefenceEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#AntiAnalysisEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#AntiAnalysisEvent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AntiAnalysis"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#DebuggerChecking"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#EnvironmentDetection"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#RemoteControlEvent"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#AntiDefence -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#AntiDefence">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#EvasionEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#AntiDefenceEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#AntiDefenceEvent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#RemovalOfRegistries"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#ShutdownOfDefenceMechanisms"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#AttackLaunchingEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#AttackLaunchingEvent">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SuspiciousBehaviorRules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#AttackLaunchingEventEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#AttackLaunchingEventEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AttackLaunchingEvent"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#B -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#B">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SuspiciousBehaviorRules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Backdoor -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Backdoor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AntiAnalysis"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AntiDefence"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#RemoteControlEvent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Detected"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#BinaryFile -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#BinaryFile">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#GetCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#BinaryFileEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#BinaryFileEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#BinaryFile"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Botnet -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Botnet">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AttackLaunchingEvent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#DownloadCode"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#SelfDefenceEvent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#SubVersionEvent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Detected"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Browser -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Browser">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SubVersionEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#BrowserEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#BrowserEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#Browser"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ComponentChecking -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#ComponentChecking">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Maintenance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ComponentCheckingEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#ComponentCheckingEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#ComponentChecking"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ConfigurationFile -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#ConfigurationFile">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#GetCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ConfigurationFileEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#ConfigurationFileEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#ConfigurationFile"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#CreateSynchronizationObject -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#CreateSynchronizationObject">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Maintenance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#CreateSynchronizationObjectEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#CreateSynchronizationObjectEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#CreateSynchronizationObject"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Credential -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Credential">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#UserInformationStealing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#CredentialEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#CredentialEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#Credential"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#DebuggerChecking -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#DebuggerChecking">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#AntiAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#DebuggerCheckingEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#DebuggerCheckingEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#DebuggerChecking"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Detected -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Detected"/>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Dos -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Dos">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#A"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#B"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#AttackLaunchingEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#DosEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#DosEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#Dos"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#DownloadCode -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#DownloadCode">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#RemoteControlEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#DownloadCodeEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#DownloadCodeEvent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#KnownMalwareExecution"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#OtherCodeExecution"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#EmailSending -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#EmailSending">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#AttackLaunchingEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#EmailSendingEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#EmailSendingEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#EmailSending"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#EnvironmentDetection -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#EnvironmentDetection">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#AntiAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#EnvironmentDetectionEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#EnvironmentDetectionEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#EnvironmentDetection"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#EvasionEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#EvasionEvent">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SuspiciousBehaviorRules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#EvasionEventEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#EvasionEventEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#EvasionEvent"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Events -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Events"/>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Exploit -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Exploit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AttackLaunchingEvent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#RemoteControlEvent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#SubVersionEvent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Detected"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ExploitSending -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#ExploitSending">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#AttackLaunchingEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ExploitSendingEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#ExploitSendingEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#ExploitSending"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#GetCommand -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#GetCommand">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#RemoteControlEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#GetCommandEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#GetCommandEvent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#BinaryFile"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#ConfigurationFile"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#IRC_IM_Connection"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Hostname -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Hostname">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SystemInformationStealing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#HostnameEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#HostnameEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#Hostname"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#IRC_IM_Connection -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#IRC_IM_Connection">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#GetCommand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#IRC_IM_ConnectionEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#IRC_IM_ConnectionEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#IRC_IM_Connection"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#InternetBankingData -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#InternetBankingData">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#UserInformationStealing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#InternetBankingDataEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#InternetBankingDataEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#InternetBankingData"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#KnownMalwareExecution -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#KnownMalwareExecution">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#A"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#B"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#DownloadCode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#KnownMalwareExecutionEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#KnownMalwareExecutionEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#KnownMalwareExecution"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#LanguageChecking -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#LanguageChecking">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Maintenance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#LanguageCheckingEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#LanguageCheckingEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#LanguageChecking"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Maintenance -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Maintenance">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SelfDefenceEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#MaintenanceEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#MaintenanceEvent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#ComponentChecking"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#CreateSynchronizationObject"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#LanguageChecking"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#Persistence"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#MemoryWriting -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#MemoryWriting">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#A"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#B"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SubVersionEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#MemoryWritingEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#MemoryWritingEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#MemoryWriting"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#OSInformation -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#OSInformation">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SystemInformationStealing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#OSInformationEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#OSInformationEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#OSInformation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#OperatingSystem -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#OperatingSystem">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SubVersionEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#OperatingSystemEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#OperatingSystemEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#OperatingSystem"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#OtherCodeExecution -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#OtherCodeExecution">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#DownloadCode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#OtherCodeExecutionEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#OtherCodeExecutionEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#OtherCodeExecution"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Persistence -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Persistence">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Maintenance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#PersistenceEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#PersistenceEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#Persistence"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Processes -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Processes"/>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#RemoteControlEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#RemoteControlEvent">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SuspiciousBehaviorRules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#RemoteControlEventEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#RemoteControlEventEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#RemoteControlEvent"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#RemovalOfEvidence -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#RemovalOfEvidence">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#AntiAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#RemovalOfEvidenceEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#RemovalOfEvidenceEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#RemovalOfEvidence"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#RemovalOfRegistries -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#RemovalOfRegistries">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#AntiDefence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#RemovalOfRegistriesEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#RemovalOfRegistriesEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#RemovalOfRegistries"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ResourceInformation -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#ResourceInformation">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SystemInformationStealing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ResourceInformationEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#ResourceInformationEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#ResourceInformation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Rootkit -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Rootkit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AntiAnalysis"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AntiDefence"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#DownloadCode"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#Scanning"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Detected"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Scanning -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Scanning">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#AttackLaunchingEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ScanningEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#ScanningEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#Scanning"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#SelfDefenceEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#SelfDefenceEvent">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SuspiciousBehaviorRules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#SelfDefenceEventEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#SelfDefenceEventEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#SelfDefenceEvent"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ShutdownOfDefenceMechanisms -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#ShutdownOfDefenceMechanisms">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#AntiDefence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ShutdownOfDefenceMechanismsEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#ShutdownOfDefenceMechanismsEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#ShutdownOfDefenceMechanisms"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Spyware -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Spyware">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AntiAnalysis"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#DownloadCode"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#Scanning"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#StealingEvent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#SubVersionEvent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Detected"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#StealingEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#StealingEvent">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SuspiciousBehaviorRules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#StealingEventEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#StealingEventEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#StealingEvent"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#SubVersionEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#SubVersionEvent">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#SuspiciousBehaviorRules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#SubVersionEventEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#SubVersionEventEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#SubVersionEvent"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#SuspiciousBehaviorRules -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#SuspiciousBehaviorRules"/>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#SystemInformationStealing -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#SystemInformationStealing">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#StealingEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#SystemInformationStealingEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#SystemInformationStealingEvent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#Hostname"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#OSInformation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#ResourceInformation"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#TrojanHorse -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#TrojanHorse">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AttackLaunchingEvent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#DownloadCode"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#StealingEvent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Detected"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#UserInformationStealing -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#UserInformationStealing">
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#StealingEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#UserInformationStealingEvent -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#UserInformationStealingEvent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#Credential"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#InternetBankingData"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Events"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Virus -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Virus">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AntiAnalysis"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                                <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AntiDefence"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#DownloadCode"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Detected"/>
+    </owl:Class>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Worm -->
+
+    <owl:Class rdf:about="http://patrik.matiasko/agents.owl#Worm">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#AttackLaunchingEvent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#DownloadCode"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://patrik.matiasko/agents.owl#does"/>
+                        <owl:someValuesFrom rdf:resource="http://patrik.matiasko/agents.owl#MemoryWriting"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://patrik.matiasko/agents.owl#Detected"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#A -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#A">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#AntiAnalysis -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#AntiAnalysis">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#AntiAnalysis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#AntiDefence -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#AntiDefence">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#AntiDefence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#AttackLaunchingEvent -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#AttackLaunchingEvent">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#AttackLaunchingEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#B -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#B">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#B"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#BinaryFile -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#BinaryFile">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#BinaryFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Browser -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#Browser">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#Browser"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ComponentChecking -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#ComponentChecking">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#ComponentChecking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ConfigurationFile -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#ConfigurationFile">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#ConfigurationFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#CreateSynchronizationObject -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#CreateSynchronizationObject">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#CreateSynchronizationObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Credential -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#Credential">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#Credential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#DebuggerChecking -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#DebuggerChecking">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#DebuggerChecking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Dos -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#Dos">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#Dos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#DownloadCode -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#DownloadCode">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#DownloadCode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#EmailSending -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#EmailSending">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#EmailSending"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#EnvironmentDetection -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#EnvironmentDetection">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#EnvironmentDetection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#EvasionEvent -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#EvasionEvent">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#EvasionEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ExploitSending -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#ExploitSending">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#ExploitSending"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#GetCommand -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#GetCommand">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#GetCommand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Hostname -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#Hostname">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#Hostname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#IRC_IM_Connection -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#IRC_IM_Connection">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#IRC_IM_Connection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#InternetBankingData -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#InternetBankingData">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#InternetBankingData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#KnownMalwareExecution -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#KnownMalwareExecution">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#KnownMalwareExecution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#LanguageChecking -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#LanguageChecking">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#LanguageChecking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Maintenance -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#Maintenance">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#Maintenance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#MemoryWriting -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#MemoryWriting">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#MemoryWriting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#OSInformation -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#OSInformation">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#OSInformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#OperatingSystem -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#OperatingSystem">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#OperatingSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#OtherCodeExecution -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#OtherCodeExecution">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#OtherCodeExecution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Persistence -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#Persistence">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#Persistence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#RemoteControlEvent -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#RemoteControlEvent">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#RemoteControlEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#RemovalOfEvidence -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#RemovalOfEvidence">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#RemovalOfEvidence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#RemovalOfRegistries -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#RemovalOfRegistries">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#RemovalOfRegistries"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ResourceInformation -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#ResourceInformation">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#ResourceInformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#Scanning -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#Scanning">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#Scanning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#SelfDefenceEvent -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#SelfDefenceEvent">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#SelfDefenceEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#ShutdownOfDefenceMechanisms -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#ShutdownOfDefenceMechanisms">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#ShutdownOfDefenceMechanisms"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#StealingEvent -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#StealingEvent">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#StealingEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#SubVersionEvent -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#SubVersionEvent">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#SubVersionEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#SystemInformationStealing -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#SystemInformationStealing">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#SystemInformationStealing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://patrik.matiasko/agents.owl#UserInformationStealing -->
+
+    <owl:NamedIndividual rdf:about="http://patrik.matiasko/agents.owl#UserInformationStealing">
+        <rdf:type rdf:resource="http://patrik.matiasko/agents.owl#UserInformationStealing"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+

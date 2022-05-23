@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://kristian.sranko/rekal_agents.owl#"
+     xml:base="http://kristian.sranko/rekal_agents.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://kristian.sranko/rekal_agents.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#dllOf -->
+
+    <owl:ObjectProperty rdf:about="http://kristian.sranko/rekal_agents.owl#dllOf">
+        <owl:inverseOf rdf:resource="http://kristian.sranko/rekal_agents.owl#hasDLL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#hasDLL -->
+
+    <owl:ObjectProperty rdf:about="http://kristian.sranko/rekal_agents.owl#hasDLL"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#base -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#base"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#created -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#created"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#init -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#init"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#load -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#load"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#mem -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#mem"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#path -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#path"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#pid -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#pid"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#DLLs -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#DLLs"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#LdrModule -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModule"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#LdrModuleDLLs -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModuleDLLs">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#LdrModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#LdrModuleEvent -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModuleEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://kristian.sranko/rekal_agents.owl#hasDLL"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://kristian.sranko/rekal_agents.owl#init"/>
+                                <owl:hasValue>false</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://kristian.sranko/rekal_agents.owl#load"/>
+                                <owl:hasValue>false</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://kristian.sranko/rekal_agents.owl#mem"/>
+                                <owl:hasValue>false</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#LdrModuleProcesses -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModuleProcesses">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#LdrModule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Processes -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Processes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#blablabla -->
+
+    <owl:NamedIndividual rdf:about="http://kristian.sranko/rekal_agents.owl#blablabla">
+        <rdf:type rdf:resource="http://kristian.sranko/rekal_agents.owl#LdrModuleDLLs"/>
+        <init rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</init>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

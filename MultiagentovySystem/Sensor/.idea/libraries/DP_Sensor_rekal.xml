@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="DP-Sensor_rekal">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/DP-Sensor_rekal.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,298 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://kristian.sranko/rekal_agents.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#MalfindProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Malfind"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#MalfindSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModuleProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#LdrModule"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#LdrModuleSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#FakeNamedProcessesSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#InlineHooksTargetFunctions">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#InlineHooks"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#IRPHooksTargetFunctions">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#IRPHooks"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#Drivers">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#path">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#PstreeSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#callsFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#PslistSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#Malfind">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#HollowfindProperties">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Hollowfind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#InlineHooksSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#ExitedProcessesProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#ExitedProcesses"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#ExitedProcessesSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#Hollowfind">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#addressOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#PslistPAPHSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#HidingProcessesProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#HidingProcesses"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#HidingProcessesSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#HidingProcessesSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#IATHooksTargetFunctions">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#IATHooks"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#Modules">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#EATHooksSourceFunctions">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#EATHooks"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#HidingProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#hasDLL">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#EATHooks">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#IATHooksSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#EATHooksTargetFunctions">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#EATHooks"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#IATHooksSourceFunctions">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#IATHooks"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#InlineHooks">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModuleSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#pid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#IRPHooksSourceFunctions">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#IRPHooks"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#PsscanProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Psscan"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#PsscanSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#IATHooksProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#IATHooks"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#IATHooksSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#PslistPAPH">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#Properties">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#InlineHooksProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#InlineHooks"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#InlineHooksSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#Psscan">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#PstreeProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Pstree"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#PstreeSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModuleDLLs">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#LdrModule"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#DLLs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#IRPHooks">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#FakeNamedProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#mem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#IRPHooksDriver">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#IRPHooks"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#ExitedProcessesSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#Suspicious">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#FakeNamedProcessesProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#FakeNamedProcesses"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#FakeNamedProcessesSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#IATHooks">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#ExitedProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#Processes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#does">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#HollowfindProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Hollowfind"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#HollowfindSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#base">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#memberOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#dllOf">
+    <owl:inverseOf rdf:resource="http://kristian.sranko/rekal_agents.owl#hasDLL"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#Pslist">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#init">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#PsscanSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#InlineHooksSourceFunctions">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#InlineHooks"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#MalfindProperties">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Malfind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#PslistPAPHProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#PslistPAPH"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#PslistPAPHSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#Functions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#functionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#MalfindSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#Pstree">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModule">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#process_name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#PslistProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Pslist"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#PslistSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#load">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#HollowfindSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#EATHooksSuspicious">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#EATHooksProcesses">
+    <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#EATHooks"/>
+    <owl:equivalentClass rdf:resource="http://kristian.sranko/rekal_agents.owl#EATHooksSuspicious"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://kristian.sranko/rekal_agents.owl#created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+</rdf:RDF>
