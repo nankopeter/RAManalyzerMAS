@@ -46,60 +46,60 @@ if __name__ == '__main__':
 
     image = memory_image.get_memory(profile, path)
 
-    # image = memory_image.get_memory(sys.argv[1], sys.argv[2]) #stuxnet
-    # image = memory_image.get_memory(sys.argv[1], sys.argv[3]) #zeus
-    # image = memory_image.get_memory(sys.argv[1], sys.argv[4]) #black energy
-    # image = memory_image.get_memory(sys.argv[1], sys.argv[5])  #tiger
-    # image = memory_image.get_memory(sys.argv[1], sys.argv[6])  #cooreflood
-    # image = memory_image.get_memory(sys.argv[1], sys.argv[7])  #prolaco
+    image = memory_image.get_memory(sys.argv[1], sys.argv[2]) #stuxnet
+    image = memory_image.get_memory(sys.argv[1], sys.argv[3]) #zeus
+    image = memory_image.get_memory(sys.argv[1], sys.argv[4]) #black energy
+    image = memory_image.get_memory(sys.argv[1], sys.argv[5])  #tiger
+    image = memory_image.get_memory(sys.argv[1], sys.argv[6])  #cooreflood
+    image = memory_image.get_memory(sys.argv[1], sys.argv[7])  #prolaco
 
     # process technique
-    # process_list_object = Process_List(image)
+    process_list_object = Process_List(image)
+
+    print_message_list("Pslist", process_list_object.get_array_of_strings(process_list_object.get_psLIST()))
+    send_message_list("Pslist",
+                      process_list_object.get_array_of_strings(process_list_object.get_psLIST()),
+                      message_queue)
+    print_message_list("PsSCAN", process_list_object.get_array_of_strings(process_list_object.get_psSCAN()))
+    send_message_list("PsSCAN",
+                      process_list_object.get_array_of_strings(process_list_object.get_psSCAN()),
+                      message_queue)
+    print_message_list("PsTREE", process_list_object.get_array_of_strings(process_list_object.get_psTREE()))
+    send_message_list("PsTREE",
+                      process_list_object.get_array_of_strings(process_list_object.get_psTREE()),
+                      message_queue)
+    print_message_list("ExitedProcesses", process_list_object.get_array_of_strings(process_list_object.get_exited_processes()))
+    send_message_list("ExitedProcesses",
+                      process_list_object.get_array_of_strings(process_list_object.get_exited_processes()),
+                      message_queue)
+    print_message_list("HidingProcesses", process_list_object.get_array_of_strings(process_list_object.get_hiding_processes()))
+    send_message_list("HidingProcesses",
+                      process_list_object.get_array_of_strings(process_list_object.get_hiding_processes()),
+                      message_queue)
+    print_message_list("FakeNamedProcesses", process_list_object.get_array_of_strings(process_list_object.get_fake_name_list()))
+    send_message_list("FakeNamedProcesses",
+                      process_list_object.get_array_of_strings(process_list_object.get_fake_name_list()),
+                      message_queue)
     #
-    # print_message_list("Pslist", process_list_object.get_array_of_strings(process_list_object.get_psLIST()))
-    # send_message_list("Pslist",
-    #                   process_list_object.get_array_of_strings(process_list_object.get_psLIST()),
-    #                   message_queue)
-    # print_message_list("PsSCAN", process_list_object.get_array_of_strings(process_list_object.get_psSCAN()))
-    # send_message_list("PsSCAN",
-    #                   process_list_object.get_array_of_strings(process_list_object.get_psSCAN()),
-    #                   message_queue)
-    # print_message_list("PsTREE", process_list_object.get_array_of_strings(process_list_object.get_psTREE()))
-    # send_message_list("PsTREE",
-    #                   process_list_object.get_array_of_strings(process_list_object.get_psTREE()),
-    #                   message_queue)
-    # print_message_list("ExitedProcesses", process_list_object.get_array_of_strings(process_list_object.get_exited_processes()))
-    # send_message_list("ExitedProcesses",
-    #                   process_list_object.get_array_of_strings(process_list_object.get_exited_processes()),
-    #                   message_queue)
-    # print_message_list("HidingProcesses", process_list_object.get_array_of_strings(process_list_object.get_hiding_processes()))
-    # send_message_list("HidingProcesses",
-    #                   process_list_object.get_array_of_strings(process_list_object.get_hiding_processes()),
-    #                   message_queue)
-    # print_message_list("FakeNamedProcesses", process_list_object.get_array_of_strings(process_list_object.get_fake_name_list()))
-    # send_message_list("FakeNamedProcesses",
-    #                   process_list_object.get_array_of_strings(process_list_object.get_fake_name_list()),
-    #                   message_queue)
-    # #
-    # # # malfind technique
-    # send_message_list("Malfind", malfind.malfind_info_stuxnet, message_queue)
-    # # sendMessageList("Malfind", malfind_info_zeus)
-    # # sendMessageList("Malfind", malfind_info_blackEnergy)
-    # # sendMessageList("Malfind", malfind_info_tigger)
-    # # sendMessageList("Malfind", malfind_info_coreflood)
-    # # sendMessageList("Malfind", malfind_info_prolaco)
-    #
+    # # malfind technique
+    send_message_list("Malfind", malfind.malfind_info_stuxnet, message_queue)
+    # sendMessageList("Malfind", malfind_info_zeus)
+    # sendMessageList("Malfind", malfind_info_blackEnergy)
+    # sendMessageList("Malfind", malfind_info_tigger)
+    # sendMessageList("Malfind", malfind_info_coreflood)
+    # sendMessageList("Malfind", malfind_info_prolaco)
+
     # hollowfind technique
-    # hollowfind_object = HollowFind(image)
-    # print_message_list("HollowFind", hollowfind_object.get_array_of_strings(hollowfind_object.get_hollowfind()))
-    # send_message_list("HollowFind", hollowfind_object.get_array_of_strings(hollowfind_object.get_hollowfind()),
-    #                   message_queue)
-    #
-    # # ldrmodule technique
-    # ldr_module_object = Ldr_module(image)
-    # print_message_list("LdrModule", ldr_module_object.get_array_of_strings(ldr_module_object.get_LDRmodule()))
-    # send_message_list("LdrModule", ldr_module_object.get_array_of_strings(ldr_module_object.get_LDRmodule()),
-    #                   message_queue)
+    hollowfind_object = HollowFind(image)
+    print_message_list("HollowFind", hollowfind_object.get_array_of_strings(hollowfind_object.get_hollowfind()))
+    send_message_list("HollowFind", hollowfind_object.get_array_of_strings(hollowfind_object.get_hollowfind()),
+                      message_queue)
+
+    # ldrmodule technique
+    ldr_module_object = Ldr_module(image)
+    print_message_list("LdrModule", ldr_module_object.get_array_of_strings(ldr_module_object.get_LDRmodule()))
+    send_message_list("LdrModule", ldr_module_object.get_array_of_strings(ldr_module_object.get_LDRmodule()),
+                      message_queue)
 
     # kernel hooks technique
     ssdt_array_output = []
@@ -137,18 +137,17 @@ if __name__ == '__main__':
     modscan_list.render_text(copy.deepcopy(image), infected_modscan_list_dict, driver_name,
                              unloaded_drivers, hidden_drivers, infected_drivers)
 
-    unknown_callbacks_timers = [] # potential
-
     callbacks_array = []
-    callbacks.render_text(copy.deepcopy(image), callbacks_array, infected_modscan_list_dict, unknown_callbacks_timers)
+    callbacks.render_text(copy.deepcopy(image), callbacks_array, infected_modscan_list_dict)
     if callbacks_array:
         send_message_list("Callbacks", callbacks_array, message_queue)
 
     timers_array = []
-    timers.render_text(copy.deepcopy(image), timers_array, infected_modscan_list_dict, unknown_callbacks_timers)
+    timers.render_text(copy.deepcopy(image), timers_array, infected_modscan_list_dict)
     if timers_array:
         send_message_list("Timers", timers_array, message_queue)
 
+    ## test dummy data
     # ssdt_array_output = []
     # ssdt_array_output.append("syscall_name-(test)-modul_name-testik")
     # send_message_list("SSDT", ssdt_array_output, message_queue)

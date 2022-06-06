@@ -16,20 +16,20 @@ def render_text(image, infected_module_list_array, driver_name):
 
         if str(module.BaseDllName or '') == driver_name:
             infected_module_list_array.append(
-                "name-{0}-path-{1}".format(str(module.BaseDllName or ''), str(module.FullDllName or '')))
+                "modul_name-{0}-path-{1}".format(str(module.BaseDllName or ''), str(module.FullDllName or '')))
             infected_drivers.add(str(module.BaseDllName or ''))
         elif str(module.FullDllName or '').startswith("\\??"):
             # we dont care about VMware driver
             if not str(module.BaseDllName or '') == 'vmmemctl.sys':
                 infected_module_list_array.append(
-                    "name-{0}-path-{1}".format(str(module.BaseDllName or ''), str(module.FullDllName or '')))
+                    "modul_name-{0}-path-{1}".format(str(module.BaseDllName or ''), str(module.FullDllName or '')))
                 infected_drivers.add(str(module.BaseDllName or ''))
 
     return infected_drivers
 
 
 def unloaded_render_text(image):
-    modulesclass = modules.UnloadedModules(image)+
+    modulesclass = modules.UnloadedModules(image)
 
     unloaded_drivers = set()
 

@@ -1,7 +1,7 @@
 import volatility.plugins.malware.timers as timers
 
 
-def render_text(image, timers_array, infected_modscan_list_dict, unknown_callbacks_timers):
+def render_text(image, timers_array, infected_modscan_list_dict):
     timersclass = timers.Timers(image)
 
     for timer, module in timersclass.calculate():
@@ -18,9 +18,6 @@ def render_text(image, timers_array, infected_modscan_list_dict, unknown_callbac
 
         due_time = "{0:#010x}:{1:#010x}".format(timer.DueTime.HighPart, timer.DueTime.LowPart)
 
-        if module_name == "UNKNOWN":
-            unknown_callbacks_timers.append("due_time-{0}-period-{1}-signaled-{2}-module_name-{3}"
-                                            .format(due_time, timer.Period, signaled, module_name))
-        elif str(module_name) in infected_modscan_list_dict:
+        if str(module_name) in infected_modscan_list_dict:
             timers_array.append("due_time-{0}-period-{1}-signaled-{2}-module_name-{3}"
                                 .format(due_time, timer.Period, signaled, str(module_name)))

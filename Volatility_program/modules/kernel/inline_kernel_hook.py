@@ -13,7 +13,7 @@ def render_text(image, inline_kernel_hook_array):
 
     for process, module, hook in apihooksclass.calculate():
 
-        inline_kernel_hook_array.append("hook_mode-{0}-hook_type-{1}-victim_module-{2}-function-{3}-hooking_module-{4}"
+        inline_kernel_hook_array.append("hook_mode-{0}-hook_type-{1}-victim_module-{2}-function-{3}-modul_name-{4}"
                                         .format(hook.Mode, hook.Type, str(module.BaseDllName or '') or
                                                 ntpath.basename(str(module.FullDllName or '')),
                                                 hook.Detail, hook.HookModule))

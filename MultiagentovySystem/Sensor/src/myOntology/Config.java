@@ -30,5 +30,5 @@ public class Config {
 //     * Source file defines path to OWL file containing of agent ontology definitions
 //     * This can be loaded when OM config {@link agent.core.memory.Config#CREATE_MODEL CREATE_MODEL} is set True
 //     */
-    public static final String SOURCE_FILE = "D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\memory_init\\rekal_agents.owl";
+    public static final String SOURCE_FILE = System.getProperty("user.dir") + "\\MultiagentovySystem\\Sensor\\memory_init\\rekal_agents.owl";
 }

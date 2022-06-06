@@ -441,7 +441,8 @@ public class Gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
  
     private static void readMainProperty(){
-        String propertyFile = "D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\System.properties";
+        String pathToProject = System.getProperty("user.dir");
+        String propertyFile = pathToProject + "\\MultiagentovySystem\\Sensor\\config\\System.properties";
         try {
             config = new java.util.Properties();
             config.load(new FileInputStream(propertyFile));
@@ -608,90 +609,90 @@ public class Gui extends javax.swing.JFrame {
 //            ac = sensorsContainer.createNewAgent("DosSensor", "sensors.DosSensor", readProperty("C:\\Users\\mizom\\Downloads\\DVD\\MultiagentovySystem\\Sensor\\config\\DosSensor.properties").toArray());
 //            ac.start();
 //            Sensors.add("DosSensor");
-
+            String pathToProject = System.getProperty("user.dir");
 
             ac = sensorsContainer.createNewAgent("PsscanSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\PsscanSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\PsscanSensor.properties").toArray());
             ac.start();
             Sensors.add("PsscanSensor");
 
             ac = sensorsContainer.createNewAgent("PstreeSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\PstreeSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\PstreeSensor.properties").toArray());
             ac.start();
             Sensors.add("PstreeSensor");
 
             ac = sensorsContainer.createNewAgent("ExitedProcessesSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\ExitedProcessesSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\ExitedProcessesSensor.properties").toArray());
             ac.start();
             Sensors.add("ExitedProcessesSensor");
 
             ac = sensorsContainer.createNewAgent("HidingProcessesSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\HidingProcessesSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\HidingProcessesSensor.properties").toArray());
             ac.start();
             Sensors.add("HidingProcessesSensor");
 
             ac = sensorsContainer.createNewAgent("FakeNamedProcessesSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\FakeNamedProcessesSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\FakeNamedProcessesSensor.properties").toArray());
             ac.start();
             Sensors.add("FakeNamedProcessesSensor");
 
             ac = sensorsContainer.createNewAgent("PslistSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\PslistSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\PslistSensor.properties").toArray());
             ac.start();
             Sensors.add("PslistSensor");
 
             ac = sensorsContainer.createNewAgent("LdrModuleSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\LdrModuleSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\LdrModuleSensor.properties").toArray());
             ac.start();
             Sensors.add("LdrModuleSensor");
 
             ac = sensorsContainer.createNewAgent("MalfindSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\MalfindSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\MalfindSensor.properties").toArray());
             ac.start();
             Sensors.add("MalfindSensor");
 
             ac = sensorsContainer.createNewAgent("HollowfindSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\HollowfindSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\HollowfindSensor.properties").toArray());
             ac.start();
             Sensors.add("HollowfindSensor");
 
             ac = sensorsContainer.createNewAgent("SSDTSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\SSDTSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\SSDTSensor.properties").toArray());
             ac.start();
             Sensors.add("SSDTSensor");
 
             ac = sensorsContainer.createNewAgent("InlineKernelHookSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\InlineKernelHookSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\InlineKernelHookSensor.properties").toArray());
             ac.start();
             Sensors.add("InlineKernelHookSensor");
 
             ac = sensorsContainer.createNewAgent("IdtHookSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\IdtHookSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\IdtHookSensor.properties").toArray());
             ac.start();
             Sensors.add("IdtHookSensor");
 
             ac = sensorsContainer.createNewAgent("IrpFunctionHookSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\IrpFunctionHookSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\IrpFunctionHookSensor.properties").toArray());
             ac.start();
             Sensors.add("IrpFunctionHookSensor");
 
             ac = sensorsContainer.createNewAgent("ModuleListSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\ModuleListSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\ModuleListSensor.properties").toArray());
             ac.start();
             Sensors.add("ModuleListSensor");
 
             ac = sensorsContainer.createNewAgent("CallbacksSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\CallbacksSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\CallbacksSensor.properties").toArray());
             ac.start();
             Sensors.add("CallbacksSensor");
 
             ac = sensorsContainer.createNewAgent("TimersSensor", "sensors.UniversalSensor",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\TimersSensor.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\TimersSensor.properties").toArray());
             ac.start();
             Sensors.add("TimersSensor");
 
             ac = sensorsContainer.createNewAgent("TCPpassingAgent", "sensors.TCPpassingAgent",
-                    readProperty("D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Sensor\\config\\TCPpassingAgent.properties").toArray());
+                    readProperty(pathToProject + "\\MultiagentovySystem\\Sensor\\config\\TCPpassingAgent.properties").toArray());
             ac.start();
             Sensors.add("TCPpassingAgent");
 

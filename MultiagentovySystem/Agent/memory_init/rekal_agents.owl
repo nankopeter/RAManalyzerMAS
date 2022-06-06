@@ -76,6 +76,90 @@
     
 
 
+    <!-- http://kristian.sranko/rekal_agents.owl#CPU -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#CPU"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#CallbackType -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#CallbackType"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#DriverName -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#DriverName"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#DriverPath -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#DriverPath"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#DueTime -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#DueTime"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#HookMode -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#HookMode"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#HookType -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#HookType"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#IdtIndex -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#IdtIndex"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#InlineKernelHookFunction -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#InlineKernelHookFunction"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#IrpFunction -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#IrpFunction"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Period -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#Period"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Signaled -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#Signaled"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#SyscallName -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#SyscallName"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#VictimModule -->
+
+    <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#VictimModule"/>
+    
+
+
     <!-- http://kristian.sranko/rekal_agents.owl#base -->
 
     <owl:DatatypeProperty rdf:about="http://kristian.sranko/rekal_agents.owl#base"/>
@@ -132,6 +216,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Callbacks -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Callbacks">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
     
 
 
@@ -343,6 +435,22 @@
     
 
 
+    <!-- http://kristian.sranko/rekal_agents.owl#IDTHook -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#IDTHook">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#IRPFunctionHook -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#IRPFunctionHook">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
     <!-- http://kristian.sranko/rekal_agents.owl#IRPHooks -->
 
     <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#IRPHooks">
@@ -416,6 +524,14 @@
     
 
 
+    <!-- http://kristian.sranko/rekal_agents.owl#InlineKernelHook -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#InlineKernelHook">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
     <!-- http://kristian.sranko/rekal_agents.owl#LdrModule -->
 
     <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#LdrModule">
@@ -478,6 +594,14 @@
 
     <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#MalfindSuspicious">
         <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#ModuleList -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#ModuleList">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
     </owl:Class>
     
 
@@ -600,9 +724,25 @@
     
 
 
+    <!-- http://kristian.sranko/rekal_agents.owl#SSDTHook -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#SSDTHook">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
+    
+
+
     <!-- http://kristian.sranko/rekal_agents.owl#Suspicious -->
 
     <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Suspicious"/>
+    
+
+
+    <!-- http://kristian.sranko/rekal_agents.owl#Timers -->
+
+    <owl:Class rdf:about="http://kristian.sranko/rekal_agents.owl#Timers">
+        <rdfs:subClassOf rdf:resource="http://kristian.sranko/rekal_agents.owl#Modules"/>
+    </owl:Class>
 </rdf:RDF>
 
 

@@ -371,7 +371,7 @@ public class Gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
  
     private static void readMainProperty(){
-        String propertyFile = "D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Agent\\config\\System.properties";
+        String propertyFile = System.getProperty("user.dir") + "\\MultiagentovySystem\\Agent\\config\\System.properties";
         try {
             config = new java.util.Properties();
             config.load(new FileInputStream(propertyFile));
@@ -556,7 +556,7 @@ public class Gui extends javax.swing.JFrame {
             // AGENTS
               
             // AttackLaunchingEvent
-            String configPaths = "D:\\Diplomovka_program\\bakalarka-master\\program\\MultiagentovySystem\\Agent\\";
+            String configPaths = System.getProperty("user.dir") + "\\MultiagentovySystem\\Agent\\";
             ac = cc.createNewAgent("PsscanAgent", "agents.UniversalAgent", readProperty(configPaths + "config\\PsscanAgent.properties").toArray());
             ac.start();
             Agents.add("PsscanAgent");

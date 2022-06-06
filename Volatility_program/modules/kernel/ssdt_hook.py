@@ -43,6 +43,6 @@ def render_text(image, ssdt_entry_array):
     for k, v in map_sysc_name_and_mod.items():
         if not driver_name:
             driver_name = v
-        ssdt_entry_array.append("syscall_name-({0})-syscall_modname-{1}".format(k, v))
+        ssdt_entry_array.append("syscall_name-({0})-modul_name-{1}".format(k, v))
 
     return driver_name

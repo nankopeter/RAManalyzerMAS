@@ -1,0 +1,9 @@
+Volatility_program\volatility\build
+Volatility_program\volatility\dist
+Volatility_program\volatility\volatility.egg-info
+Volatility_program\venv\
+
+# Class Files #
+*.class
+
+out\

@@ -22,5 +22,5 @@ def render_text(image, infected_modscan_list_array, driver_name, unloaded_driver
                     infected_drivers.add(str(ldr_entry.BaseDllName or ''))
 
         if str(ldr_entry.BaseDllName or '') in unloaded_drivers:
-            hidden_drivers.append("name-{0}-path-{1}".format(str(ldr_entry.BaseDllName or ''),
+            hidden_drivers.append("modul_name-{0}-path-{1}".format(str(ldr_entry.BaseDllName or ''),
                                                              str(ldr_entry.FullDllName or '')))
