@@ -18,3 +18,7 @@ Open from root directory by java IDE tool, cause paths wont work right
 configure in Agent/config all properties files paths
 
 first run Sensor Gui.java then Agent Gui.java
+
+## RUN
+Volatility_program first argument is image profile and second is path to the image
+eg. "WinXPSP2x86" "C:\test_path\vmem_images\stuxnet.vmem"
